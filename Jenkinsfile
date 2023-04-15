@@ -41,14 +41,13 @@ pipeline{
                 }
             }
         }
-        stage('code deploy'){
+        stage('5 code-deploy'){
             when{
-                branch 'develop'{
-                    steps{
-                        sh 'id jenkins'
-                        sh 'sudo systemctl status jenkins'
-                    }  
-                }
+                branch 'develop'
+            }
+            steps{
+                sh 'id jenkins'
+                sh 'sudo systemctl status jenkins'
             }
         }
     }
