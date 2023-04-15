@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('1-git clone'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'maestrog-id', url: 'https://github.com/maestroghub/jenkinspracticerepo.git']])
+                checkout scmGit(branches: [[name: '(main|develop|feature.*)']], extensions: [], userRemoteConfigs: [[credentialsId: 'maestrog-id', url: 'https://github.com/maestroghub/multibranchrepo2.git']])
             }
         }
         stage('2 system-resources-check'){
