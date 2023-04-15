@@ -17,7 +17,7 @@ pipeline{
             parallel{
                 stage('disk-check'){
                     steps{
-                        sh 'free-g'
+                        sh 'free -g'
                     }
                 }
             }
