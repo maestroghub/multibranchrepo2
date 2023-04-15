@@ -47,7 +47,7 @@ pipeline{
             }
             steps{
                 sh 'id jenkins'
-                sh 'sudo systemctl status jenkins'
+                sh 'cal'
             }
         }
     }
